@@ -1,0 +1,327 @@
+.content > .box {
+  padding: 15px;
+}
+.content > .box > .title {
+  font-size: 18px;
+}
+.content .cat {
+  padding: 15px;
+}
+.content.premium:before {
+  content: "Premium Box";
+}
+.content.premium:hover {
+  background-color: #eee;
+}
+
+.class > .child {
+  padding: 10px;
+}
+
+.class > .child {
+  padding: 10px;
+}
+
+.class > .child {
+  padding: 10px;
+}
+
+.class {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.widget, .my-class {
+  background-color: white;
+  padding: 20px;
+}
+
+.main-border, .my-class {
+  border: 1px solid #CCC;
+}
+
+.my-class {
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.my-class {
+  background-color: white;
+  padding: 20px;
+}
+
+.my-class {
+  border: 1px solid #CCC;
+}
+
+.my-class {
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.box h2, .box p {
+  font-size: 20px;
+}
+
+@media (max-width: 575px) {
+  .box h2, .box p {
+    font-size: 16px;
+  }
+}
+.box h2 span, .box p span {
+  font-weight: bold;
+}
+
+.box a {
+  color: #009688;
+}
+.box a:hover {
+  color: #e91e63;
+}
+
+.box {
+  font-size: 20px;
+}
+
+.box-holder {
+  width: 1000px;
+}
+
+.box-holder-content {
+  margin: auto;
+}
+
+/* TK2 */
+/*EX1*/
+.school {
+  padding: 20px;
+  direction: ltr;
+  margin-left: 20px;
+}
+.school .school-box {
+  padding: calc(20px / 2);
+}
+.school:hover .school-box {
+  background-color: #eee;
+}
+
+/*EX2*/
+/*Theme Version: 1.0 */
+/* Website Theme Main Color Is:red */
+/*Website Theme Alternate Color Is:blue*/
+/*EX3*/
+.class {
+  color: red;
+}
+
+/*EX4*/
+.class {
+  color: red;
+}
+
+/*EX5*/
+/*TK3*/
+/*EX1*/
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-color: red;
+}
+
+/*EX2*/
+.col-1 {
+  width: 6.25%;
+}
+
+.col-2 {
+  width: 12.5%;
+}
+
+.col-3 {
+  width: 18.75%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-5 {
+  width: 31.25%;
+}
+
+.col-6 {
+  width: 37.5%;
+}
+
+.col-7 {
+  width: 43.75%;
+}
+
+.col-8 {
+  width: 50%;
+}
+
+.col-9 {
+  width: 56.25%;
+}
+
+.col-10 {
+  width: 62.5%;
+}
+
+.col-11 {
+  width: 68.75%;
+}
+
+.col-12 {
+  width: 75%;
+}
+
+.col-13 {
+  width: 81.25%;
+}
+
+.col-14 {
+  width: 87.5%;
+}
+
+.col-15 {
+  width: 93.75%;
+}
+
+.col-16 {
+  width: 100%;
+}
+
+/*EX3*/
+.books {
+  padding: 20px;
+  font-size: 18px;
+  border-bottom: 2px solid red;
+  color: #444;
+}
+
+.games {
+  padding: 30px;
+  font-size: 18px;
+  border-bottom: 2px solid green;
+  color: #444;
+}
+
+.dvds {
+  padding: 20px;
+  font-size: 16px;
+  border-bottom: 2px solid blue;
+  color: #444;
+}
+
+/*EX4*/
+.circle-100 {
+  width: 100 px;
+  height: 100 px;
+  border-radius: 50 px;
+}
+
+.circle-200 {
+  width: 200 px;
+  height: 200 px;
+  border-radius: 100 px;
+}
+
+.circle-300 {
+  width: 300 px;
+  height: 300 px;
+  border-radius: 150 px;
+}
+
+.circle-400 {
+  width: 400 px;
+  height: 400 px;
+  border-radius: 200 px;
+}
+
+.circle-500 {
+  width: 500 px;
+  height: 500 px;
+  border-radius: 250 px;
+}
+
+/*EX5*/
+.circle-100 {
+  width: 100 px;
+  height: 100 px;
+  border-radius: 50 px;
+}
+
+.circle-200 {
+  width: 200 px;
+  height: 200 px;
+  border-radius: 100 px;
+}
+
+.circle-300 {
+  width: 300 px;
+  height: 300 px;
+  border-radius: 150 px;
+}
+
+.circle-400 {
+  width: 400 px;
+  height: 400 px;
+  border-radius: 200 px;
+}
+
+.circle-500 {
+  width: 500 px;
+  height: 500 px;
+  border-radius: 250 px;
+}
+
+/*EX6*/
+/*EX7*/
+.box-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.box-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+/*TK4*/
+/*EX1*/
+.box-100 {
+  width: 100 px;
+  height: 200 px;
+}
+
+.box-200 {
+  width: 200 px;
+  height: 400 px;
+}
+
+.box-400 {
+  width: 400 px;
+  height: 800 px;
+}
+
+.box-800 {
+  width: 800 px;
+  height: 1600 px;
+}
+
+.box-1600 {
+  width: 1600 px;
+  height: 3200 px;
+}
+
+/*EX2*//*# sourceMappingURL=main.css.map */

@@ -1,0 +1,348 @@
+//EX1
+
+.content{
+    >.box{
+        padding:15px;
+        >.title{
+            font-size:18px;
+        }
+    }
+    .cat{
+        padding:15px;
+    }
+    &.premium{
+        &:before{
+            content:"Premium Box";
+        }
+        &:hover{
+             background-color: #eee;
+        }
+    }
+}
+
+//EX2
+.class > .child{
+    padding:10px;
+}
+
+.class{
+    >.child{
+        padding:10px;
+    }
+}
+
+.class > {
+    .child{
+        padding:10px;
+    }
+}
+
+//EX3
+.class{
+    font: {
+        size:20px;
+        weight:bold;
+    }
+}
+
+//EX4
+//??????????????????
+
+//EX5
+.widget {
+    background-color: white;
+    padding: 20px;
+  }
+  .main-border {
+    border: 1px solid #CCC
+  }
+  .my-class {
+    font-weight: bold;
+    margin: 20px auto;
+  }
+
+  .my-class{
+    @extend .widget;
+  }
+  .my-class{
+    @extend .main-border;
+  }
+  .my-class{
+    @extend .my-class;
+  }
+//EX6
+%widget {
+  background-color: white;
+  padding: 20px;
+}
+%main-border {
+  border: 1px solid #CCC
+}
+%my-class {
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.my-class{
+    @extend %widget
+}
+
+.my-class{
+    @extend %main-border
+}
+
+.my-class{
+    @extend %my-class
+}
+
+//EX7
+
+.box{
+    h2,p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px){
+    .box{
+    h2,p{
+        font-size: 16px;
+    }
+}
+
+}
+
+.box{
+    h2,p{
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+//EX8
+$red: #e91e63;
+$green: #009688;
+
+.box {
+    a{
+        color:$green;
+        &:hover{
+            color:$red;
+        }
+    }
+}
+
+//EX10
+$b : "box";
+$h : "holder";
+
+.#{$b}{
+    font-size: 20px;
+}
+.#{$b}-#{$h}{
+width: 1000px;
+}
+.#{$b}-#{$h}-content{
+margin: auto;
+}
+
+/* TK2 */
+
+/*EX1*/
+$main: "school";
+$child: "box";
+$language: "en"; // English
+$gap: 20px;
+
+.#{$main}{
+    padding: #{$gap};
+    direction: if($language == en,ltr,rtl);
+    margin-left: #{$gap};
+    .#{$main}-#{$child}{
+        padding: calc(#{$gap} / 2);
+    }
+    &:hover{
+        .#{$main}-#{$child}{
+            background-color: #eee;
+        }
+    }
+}
+
+
+/*EX2*/
+$main-color: red;
+$alt-color: blue;
+
+/*Theme Version: 1.0 */
+/* Website Theme Main Color Is:#{$main-color} */
+/*Website Theme Alternate Color Is:#{$alt-color}*/
+
+/*EX3*/
+$number: 1;
+
+.class{
+    @if $number > 8 {
+        color: blue
+    } @else if $number > 5 {
+        color: green;
+    } @else{
+        color: red;
+    }
+}
+
+/*EX4*/
+$number: 10;
+$color: red;
+$theme: light;
+
+.class{
+    @if $number > 5 and $color == red and $theme != dark {
+        color: red;
+    }
+}
+
+/*EX5*/
+//???????????
+
+/*TK3*/
+
+/*EX1*/
+@mixin arrow($direction) {
+    content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  #{$direction}:-40px;
+  @if $direction == "top" or $direction == "bottom" {
+    left: 50%;
+  transform: translateX(-50%);
+  } @else{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @if $direction == "top" {
+  border-bottom-color: red;
+  }@else if $direction == "bottom" {
+  border-top-color: red;
+  }@else if $direction == "right" {
+  border-left-color: red;
+  }@else if $direction == "left"{
+    border-right-color: red;
+  }
+}
+
+.element {
+    &:before {
+      @include arrow("right");
+    }
+  }
+
+  /*EX2*/
+
+  @for $i from 1 through 16 {
+    .col-#{$i}{
+        width: percentage($i / 16);
+    }
+  }
+
+  /*EX3*/
+  $names:
+  "books" 20px red 18,
+  "games" 30px green 18,
+  "dvds" 20px blue;
+
+  @each $n,$pad,$color,$size in $names {
+    @if $size == null {
+        .#{$n}{
+            padding: #{$pad};
+            font-size: 16px;
+            border-bottom: 2px solid $color;
+            color: #444;
+        }
+    }@else{
+        .#{$n}{
+            padding: #{$pad};
+            font-size: #{$size}px;
+            border-bottom: 2px solid $color;
+            color: #444;
+        }
+    }
+  }
+
+  /*EX4*/
+
+  $init: 1;
+  
+  @while ($init <= 5) {
+    $code:$init*100;
+    .circle-#{$code}{
+        width:$code px ;
+        height: $code px;
+        border-radius: $code / 2 px;
+    }
+    $init : $init+1
+}
+
+/*EX5*/
+@for $i from 1 through 5{
+    $code:$i*100;
+    .circle-#{$code}{
+        width:$code px ;
+        height: $code px;
+        border-radius: $code / 2 px;
+    }
+}
+
+/*EX6*/
+
+
+
+
+/*EX7*/
+
+@mixin flex-center($width:400px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @if $width == null {
+        $width:400px;
+    }
+    width:$width;
+}
+
+.box-one {
+  @include flex-center(400px);
+}
+.box-two {
+  @include flex-center;
+}
+
+/*TK4*/
+
+/*EX1*/
+
+$num: 2;
+$start: 100;
+
+@function double($size) {
+  @return $size * $num;
+}
+
+@for $i from 1 through 5 {
+    .box-#{$start}{
+        width: $start px;
+        height: double($start) px;
+    }
+    $start:$start*$num
+}
+
+/*EX2*/
+
+@function get-total ($nums...){
+$total:0;
+@each $n in $nums {
+    $total:$total+$n
+};
+@return $total
+}
