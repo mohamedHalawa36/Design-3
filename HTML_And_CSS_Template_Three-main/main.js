@@ -53,3 +53,13 @@ comments.forEach((e) => {
     e.style.scale = 1;
   };
 });
+
+let skillSection = document.querySelector(".our-skills")
+let progressBars = document.querySelectorAll(".width")
+window.onscroll = function () {
+  if (scrollY >= secStat.offsetTop - 50) {
+    progressBars.forEach((bar) => {
+      bar.style.width = bar.dataset.width
+    });
+  }
+};
