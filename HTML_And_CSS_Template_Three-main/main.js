@@ -57,7 +57,7 @@ comments.forEach((e) => {
 let skillSection = document.querySelector(".our-skills")
 let progressBars = document.querySelectorAll(".width")
 window.onscroll = function () {
-  if (scrollY >= secStat.offsetTop - 50) {
+  if (scrollY >= skillSection.offsetTop - 50) {
     progressBars.forEach((bar) => {
       bar.style.width = bar.dataset.width
     });
