@@ -56,10 +56,12 @@ comments.forEach((e) => {
 
 let skillSection = document.querySelector(".our-skills")
 let progressBars = document.querySelectorAll(".width")
+let progPerxentBox = document.querySelectorAll(".pro")
 window.onscroll = function () {
   if (scrollY >= skillSection.offsetTop - 50) {
-    progressBars.forEach((bar) => {
-      bar.style.width = bar.dataset.width
-    });
+    for (let i = 0; i < progressBars.length; i++) {
+      progressBars[i].style.width = progressBars[i].dataset.width;
+      progPerxentBox[i].innerHTML = progressBars[i].dataset.width;
+    }
   }
 };
