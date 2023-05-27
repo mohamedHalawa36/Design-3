@@ -26,11 +26,11 @@ setInterval(()=>{
 },1000)
 
 
-let secStat = document.querySelector(".aw-stats");
-let stats = document.querySelectorAll(".st h1");
 
 
 window.onload = function () {
+  let secStat = document.querySelector(".aw-stats");
+  let stats = document.querySelectorAll(".st h1");
   window.onscroll = ()=>{
     if (scrollY >= secStat.offsetTop - 100) {
       stats.forEach((st) => {
