@@ -1,23 +1,23 @@
-let date;
 let targetDate = new Date("9-21-2023");
 let days = document.getElementById("days");
 let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
 
+let date,newDate,factor,updatedays,updateHours,updateMinutes,updateSec;
 setInterval(()=>{
   date = new Date();
-  let newDate = targetDate - date
-  let factor = (1000*60*60*24)
-  let updatedays = Math.trunc(newDate/factor);
+  newDate = targetDate - date
+  factor = (1000*60*60*24)
+  updatedays = Math.trunc(newDate/factor);
   newDate -= updatedays*factor
   factor = (1000*60*60)
-  let updateHours =Math.trunc( newDate/factor)
+  updateHours =Math.trunc( newDate/factor)
   newDate -= updateHours*factor
   factor = (1000*60)
-  let updateMinutes =Math.trunc(newDate / factor)
+  updateMinutes =Math.trunc(newDate / factor)
   newDate-= updateMinutes*factor
-  let updateSec = Math.trunc(newDate/1000)
+  updateSec = Math.trunc(newDate/1000)
 
   days.innerHTML = updatedays;
   hours.innerHTML = updateHours;
