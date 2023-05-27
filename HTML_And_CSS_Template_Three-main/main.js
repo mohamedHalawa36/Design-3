@@ -28,7 +28,6 @@ setInterval(()=>{
 
 
 
-window.onload = function () {
   let secStat = document.querySelector(".aw-stats");
   let stats = document.querySelectorAll(".st h1");
   window.onscroll = ()=>{
@@ -50,7 +49,7 @@ window.onscroll = function () {
     }
   }
 };
-};
+
 
 let comments = document.querySelectorAll(".testimonials .comment");
 comments.forEach((e) => {
