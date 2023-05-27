@@ -41,10 +41,8 @@ window.onscroll = function () {
 
   //Stats animation
   if (scrollY >= secStat.offsetTop - 100) {
-    console.log("in if");
     stats.forEach((st) => {
       st.innerHTML = st.dataset.value;
-      console.log(st.innerHTML);
     });
   }
 };
