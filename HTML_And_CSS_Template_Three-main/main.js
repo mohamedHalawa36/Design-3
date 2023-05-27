@@ -28,9 +28,7 @@ setInterval(()=>{
 
 let secStat = document.querySelector(".aw-stats");
 let stats = document.querySelectorAll(".st h1");
-stats.forEach((h1) => {
-  h1.innerHTML = 0;
-});
+
 
 window.onscroll = function () {
   if (scrollY >= secStat.offsetTop - 100) {
