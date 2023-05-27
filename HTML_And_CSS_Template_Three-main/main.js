@@ -30,11 +30,13 @@ let secStat = document.querySelector(".aw-stats");
 let stats = document.querySelectorAll(".st h1");
 
 
-window.onscroll = function () {
-  if (scrollY >= secStat.offsetTop - 100) {
-    stats.forEach((st) => {
-      st.innerHTML = st.dataset.value;
-    });
+window.onload = function () {
+  window.onscroll = ()=>{
+    if (scrollY >= secStat.offsetTop - 100) {
+      stats.forEach((st) => {
+        st.innerHTML = st.dataset.value;
+      });
+    }
   }
 };
 
